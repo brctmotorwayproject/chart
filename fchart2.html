@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>fchart test 2</title>
+	
+	
+	
+	<script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
+	<script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+	
+	<script type="text/javascript">
+	FusionCharts.ready(function() {
+	
+	var jarChart1 = new FusionCharts({
+			"type": "mscolumn2d",
+			"renderAt": "testContainer",
+			"width": "600",
+			"height": "300",
+			"dataFormat": "json",
+			"dataSource": {
+				"chart": {
+				
+				"xAxisName": "Time",
+				"yAxisName": "Vote count",
+				"theme": "fint"
+				},
+			
+			
+			"categories": [
+				{
+					"category": [
+						{
+							"label": "7am"
+						},
+						{
+							"label": "8am"
+						},
+						{
+							"label": "9am"
+						}
+					]
+				}
+			],
+			"dataset": [
+				{	
+					"seriesname": "happy",
+					"data": [
+						{
+							"value": "4"
+						},
+						{
+							"value": "0"
+						},
+						{
+							"value": "0"
+						}
+						
+					]
+				},
+				{	
+					"seriesname": "ice",
+					"data": [
+						{
+							"value": "0"
+						},
+						{
+							"value": "-1"
+						},
+						{
+							"value": "-2"
+						}
+						
+					]
+				}
+			
+		
+		]
+	}	
+});
+
+jarChart1.render();
+});
+</script>
+
+<script type="text/javascript">
+FusionCharts['debugger'].outputTo(function (message) {
+    console.log(message);
+});
+FusionCharts['debugger'].enable(true);
+</script>	
+	
+	</head>
+	<body>
+	
+	<div id="testContainer">test 2 should load here</div>
+	
+	</body>
+	
+
+</html>
